@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=180&section=header&text=Swom&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=36&desc=Full+Stack+Developer&descAlignY=58&descAlign=50" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=180&section=header&text=Swom+S%C3%A2nchez&fontSize=45&fontColor=fff&animation=fadeIn&fontAlignY=45" />
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;Python+%7C+JavaScript+%7C+C%23;Flask+%7C+Express+%7C+.NET;Building+real+projects" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&pause=1000&color=FFFFFF&center=true&vCenter=true&width=600&lines=Building+web+apps+from+scratch;Python+%7C+JS+%7C+C%23+%7C+.NET;Turning+ideas+into+real+projects" alt="Typing SVG" />
 
 <br/><br/>
 
