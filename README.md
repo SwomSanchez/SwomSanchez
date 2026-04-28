@@ -1,30 +1,36 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Swom&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=AI%20%26%20Web%20Developer&descAlignY=55&descAlign=50" />
-
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&width=500&lines=Building+with+AI+%F0%9F%A4%96;Web+Development+%F0%9F%8C%90;Always+learning+new+things+%E2%9C%A8" alt="Typing SVG" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=180&section=header&text=Swom&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=36&desc=Full+Stack+Developer&descAlignY=58&descAlign=50" />
 
 <br/>
 
----
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=20&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Full+Stack+Developer;Python+%7C+JavaScript+%7C+C%23;Building+real+projects+%F0%9F%9A%80" alt="Typing SVG" />
 
-### 🛠️ Stack
-
-![Python](https://img.shields.io/badge/Python-000?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-000?style=flat-square&logo=javascript&logoColor=white)
-![Git](https://img.shields.io/badge/Git-000?style=flat-square&logo=git&logoColor=white)
-![AI](https://img.shields.io/badge/AI%20Tools-000?style=flat-square&logo=openai&logoColor=white)
+<br/><br/>
 
 ---
 
-### 📈 Stats
+### 🛠️ Languages & Tools
 
-<img src="https://github-readme-stats.vercel.app/api?username=SwomSanchez&show_icons=true&theme=transparent&hide_border=true&title_color=6C63FF&icon_color=6C63FF&text_color=ffffff" />
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=SwomSanchez&theme=transparent&hide_border=true&ring=6C63FF&fire=6C63FF&currStreakLabel=6C63FF" />
+---
+
+### 📊 GitHub Stats
+
+<img src="https://github-readme-stats.vercel.app/api?username=SwomSanchez&show_icons=true&theme=github_dark&hide_border=true&title_color=58A6FF&icon_color=58A6FF" />
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" />
+<img src="https://github-readme-streak-stats.herokuapp.com?user=SwomSanchez&theme=github-dark-blue&hide_border=true" />
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=100&section=footer" />
 
 </div>
