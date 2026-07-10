@@ -538,12 +538,13 @@ def main():
                 "name": "Swom Sânchez",
                 "bio": "Full Stack Developer",
                 "avatar_url": "https://avatars.githubusercontent.com/u/279542741?v=4",
-                "public_repos": 12
+                "public_repos": 999,
+                "followers": 9999
             }
             repos = [
-                {"stargazers_count": 21703, "forks_count": 165487, "name": "CryptoTrack", "language": "JavaScript", "updated_at": "2026-07-10T17:25:31Z"}
+                {"stargazers_count": 99999, "forks_count": 9999, "name": "CryptoTrack", "language": "JavaScript", "updated_at": "2026-07-10T17:25:31Z"}
             ]
-            lang_stats = [("JavaScript", 60.0), ("Python", 30.0), ("HTML", 10.0)]
+            lang_stats = [("JavaScript", 45.0), ("Python", 25.0), ("HTML", 15.0), ("CSS", 10.0), ("Shell", 5.0)]
 
     svg = build_svg(user, repos, lang_stats)
     os.makedirs("assets", exist_ok=True)
