@@ -1,0 +1,535 @@
+<svg width="850" height="650" viewBox="0 0 850 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0813" />
+      <stop offset="50%" stop-color="#120e25" />
+      <stop offset="100%" stop-color="#07050e" />
+    </linearGradient>
+    <radialGradient id="glowPurple" cx="10%" cy="10%" r="50%">
+      <stop offset="0%" stop-color="#7f5af0" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#7f5af0" stop-opacity="0" />
+      <animate attributeName="cx" values="10%;25%;10%" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="10%;25%;10%" dur="14s" repeatCount="indefinite" />
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="90%" cy="90%" r="50%">
+      <stop offset="0%" stop-color="#2cb67d" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#2cb67d" stop-opacity="0" />
+      <animate attributeName="cx" values="90%;75%;90%" dur="14s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="90%;75%;90%" dur="12s" repeatCount="indefinite" />
+    </radialGradient>
+
+    <!-- Center Nebula Glow Gradient -->
+    <radialGradient id="glowCenter" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#7f5af0" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7f5af0" stop-opacity="0" />
+      <animate attributeName="cx" values="50%;42%;58%;42%;50%" dur="18s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="50%;58%;42%;48%;50%" dur="22s" repeatCount="indefinite" />
+    </radialGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="textGrad" x1="-150%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7f5af0" />
+      <stop offset="45%" stop-color="#7f5af0" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="55%" stop-color="#7f5af0" />
+      <stop offset="100%" stop-color="#7f5af0" />
+      <animate attributeName="x1" values="-150%;150%" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%;300%" dur="2.5s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- Avatar Mask -->
+    <clipPath id="avatarCircle">
+      <circle cx="95" cy="95" r="45" />
+    </clipPath>
+
+    <!-- Digit Clip Path -->
+    <clipPath id="digitClip">
+      <rect x="-2" y="2" width="22" height="30" />
+    </clipPath>
+
+    <!-- Glow Filter -->
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;display=swap');
+      
+      * {
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      .title {
+        fill: url(#textGrad);
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      
+      .subtitle {
+        fill: #94a3b8;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      
+      .section-title {
+        fill: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      
+      .stat-val {
+        fill: #ffffff;
+        font-size: 24px;
+        font-weight: 800;
+      }
+      
+      .stat-lbl {
+        fill: #64748b;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      
+      .card-desc {
+        fill: #e2e8f0;
+        font-size: 14px;
+      }
+      
+      .tech-text {
+        fill: #e2e8f0;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      
+      .card-bg {
+        fill: rgba(255, 255, 255, 0.02);
+        stroke: rgba(255, 255, 255, 0.05);
+        stroke-width: 1px;
+        transition: fill 0.2s ease, stroke 0.2s ease;
+      }
+      
+      .card-bg:hover {
+        fill: rgba(255, 255, 255, 0.04);
+        stroke: rgba(255, 255, 255, 0.12);
+      }
+      
+      .tech-chip rect {
+        transition: fill 0.25s ease, stroke 0.25s ease, filter 0.25s ease;
+      }
+      
+      .tech-chip:hover rect {
+        fill: rgba(255, 255, 255, 0.05);
+        stroke: #a78bfa;
+        filter: drop-shadow(0px 0px 5px rgba(167, 139, 250, 0.5));
+      }
+      
+      .avatar-glow {
+        stroke: url(#textGrad);
+        stroke-width: 3px;
+        stroke-linecap: round;
+        animation: rotate-cw 1.5s linear infinite;
+        filter: drop-shadow(0px 0px 8px rgba(167, 139, 250, 0.6));
+      }
+
+      /* Animations */
+      @keyframes rotate-cw {
+        0% {
+          stroke-dasharray: 20 275;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 85 210;
+          stroke-dashoffset: -147;
+        }
+        100% {
+          stroke-dasharray: 20 275;
+          stroke-dashoffset: -295;
+        }
+      }
+
+      @keyframes pulse {
+        0% { opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { opacity: 0.8; }
+      }
+      
+      .pulse-glow {
+        animation: pulse 4s infinite ease-in-out;
+        transition: filter 0.3s ease, opacity 0.3s ease;
+      }
+      
+      svg:hover .pulse-glow {
+        filter: brightness(1.3) contrast(1.05);
+      }
+
+      @keyframes roll-0 { from { transform: translateY(0); } to { transform: translateY(0); } }
+      @keyframes roll-1 { from { transform: translateY(0); } to { transform: translateY(-30px); } }
+      @keyframes roll-2 { from { transform: translateY(0); } to { transform: translateY(-60px); } }
+      @keyframes roll-3 { from { transform: translateY(0); } to { transform: translateY(-90px); } }
+      @keyframes roll-4 { from { transform: translateY(0); } to { transform: translateY(-120px); } }
+      @keyframes roll-5 { from { transform: translateY(0); } to { transform: translateY(-150px); } }
+      @keyframes roll-6 { from { transform: translateY(0); } to { transform: translateY(-180px); } }
+      @keyframes roll-7 { from { transform: translateY(0); } to { transform: translateY(-210px); } }
+      @keyframes roll-8 { from { transform: translateY(0); } to { transform: translateY(-240px); } }
+      @keyframes roll-9 { from { transform: translateY(0); } to { transform: translateY(-270px); } }
+    </style>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="850" height="650" rx="24" fill="url(#bgGrad)" />
+  <rect width="850" height="650" rx="24" fill="url(#glowPurple)" class="pulse-glow" />
+  <rect width="850" height="650" rx="24" fill="url(#glowCyan)" class="pulse-glow" />
+  <rect width="850" height="650" rx="24" fill="url(#glowCenter)" class="pulse-glow" />
+  <rect width="848" height="648" x="1" y="1" rx="23" fill="none" stroke="rgba(255, 255, 255, 0.07)" stroke-width="2" />
+
+  <!-- Floating Background Particles -->
+  <g opacity="0.38">
+    
+    <circle cx="674" cy="134" r="0.8" fill="#2cb67d">
+      <animate attributeName="cx" values="674;692;674" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="712" cy="578" r="0.9" fill="#2cb67d">
+      <animate attributeName="cx" values="712;733;712" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="258" cy="537" r="1.6" fill="#ffffff">
+      <animate attributeName="cx" values="258;287;258" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="623" cy="304" r="1.9" fill="#7f5af0">
+      <animate attributeName="cy" values="304;327;304" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="179" cy="240" r="2.1" fill="#2cb67d">
+      <animate attributeName="cy" values="240;258;240" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="387" cy="372" r="1.6" fill="#7f5af0">
+      <animate attributeName="cy" values="372;389;372" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="585" cy="320" r="2.0" fill="#ffffff">
+      <animate attributeName="cx" values="585;601;585" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="697" cy="253" r="1.9" fill="#7f5af0">
+      <animate attributeName="cy" values="253;276;253" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="484" cy="393" r="1.0" fill="#2cb67d">
+      <animate attributeName="cx" values="484;504;484" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="566" cy="270" r="1.0" fill="#2cb67d">
+      <animate attributeName="cy" values="270;286;270" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="254" cy="52" r="1.9" fill="#2cb67d">
+      <animate attributeName="cx" values="254;279;254" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="237" cy="531" r="1.4" fill="#ffffff">
+      <animate attributeName="cy" values="531;550;531" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="272" cy="594" r="1.6" fill="#ffffff">
+      <animate attributeName="cy" values="594;620;594" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="244" cy="161" r="1.5" fill="#7f5af0">
+      <animate attributeName="cx" values="244;264;244" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="716" cy="452" r="1.6" fill="#2cb67d">
+      <animate attributeName="cy" values="452;467;452" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="12s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="716" cy="137" r="1.8" fill="#ffffff">
+      <animate attributeName="cx" values="716;740;716" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="465" cy="181" r="1.4" fill="#ffffff">
+      <animate attributeName="cx" values="465;489;465" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="674" cy="539" r="1.7" fill="#7f5af0">
+      <animate attributeName="cx" values="674;699;674" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="520" cy="39" r="1.0" fill="#2cb67d">
+      <animate attributeName="cx" values="520;542;520" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="600" cy="100" r="0.9" fill="#2cb67d">
+      <animate attributeName="cx" values="600;630;600" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="582" cy="189" r="1.2" fill="#ffffff">
+      <animate attributeName="cx" values="582;606;582" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="428" cy="402" r="1.4" fill="#ffffff">
+      <animate attributeName="cx" values="428;450;428" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="85" cy="366" r="0.8" fill="#ffffff">
+      <animate attributeName="cx" values="85;102;85" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="744" cy="80" r="1.1" fill="#7f5af0">
+      <animate attributeName="cx" values="744;767;744" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="705" cy="517" r="1.1" fill="#7f5af0">
+      <animate attributeName="cx" values="705;735;705" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="12s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="436" cy="214" r="0.9" fill="#ffffff">
+      <animate attributeName="cy" values="214;242;214" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="498" cy="75" r="1.7" fill="#ffffff">
+      <animate attributeName="cy" values="75;100;75" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="131" cy="274" r="1.1" fill="#ffffff">
+      <animate attributeName="cy" values="274;294;274" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="305" cy="493" r="1.1" fill="#7f5af0">
+      <animate attributeName="cx" values="305;320;305" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="115" cy="262" r="1.0" fill="#2cb67d">
+      <animate attributeName="cy" values="262;278;262" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="188" cy="408" r="0.8" fill="#2cb67d">
+      <animate attributeName="cy" values="408;436;408" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="12s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="733" cy="589" r="1.7" fill="#2cb67d">
+      <animate attributeName="cy" values="589;610;589" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.85;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Header Section -->
+  <g transform="translate(0, 0)">
+    <!-- Avatar with Glow -->
+    <circle cx="95" cy="95" r="47" fill="none" class="avatar-glow" />
+    <circle cx="95" cy="95" r="47" fill="none" class="avatar-glow" transform="rotate(180 95 95)" />
+    <image x="48" y="48" width="94" height="94" href="https://avatars.githubusercontent.com/u/279542741?v=4" clip-path="url(#avatarCircle)" />
+    
+    <!-- Profile Info -->
+    <text x="165" y="88" class="title">Swom Sânchez</text>
+    <text x="165" y="115" class="subtitle">Full Stack Developer</text>
+  </g>
+
+  <!-- Left Side: Core Stats (Grid Layout) -->
+  <g transform="translate(45, 170)">
+    <!-- Section Title with Chart Icon -->
+    <g transform="translate(0, 3)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M3 3v18h18M7 17v-4M11 17V9M15 17v-6M19 17V5"/>
+    </g>
+    <text x="32" y="20" class="section-title">GitHub Performance</text>
+    
+    <!-- Stat 1: Repositories -->
+    <a href="https://github.com/SwomSanchez?tab=repositories" target="_blank" style="text-decoration: none;">
+      <g transform="translate(0, 40)">
+        <rect width="180" height="75" rx="16" class="card-bg" />
+        <g transform="translate(142, 14)" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+        </g>
+        
+      <g transform="translate(20, 18)" clip-path="url(#digitClip)">
+        <g style="animation: roll-2 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
+          <text x="0" y="24" class="stat-val">0</text>
+          <text x="0" y="54" class="stat-val">1</text>
+          <text x="0" y="84" class="stat-val">2</text>
+          <text x="0" y="114" class="stat-val">3</text>
+          <text x="0" y="144" class="stat-val">4</text>
+          <text x="0" y="174" class="stat-val">5</text>
+          <text x="0" y="204" class="stat-val">6</text>
+          <text x="0" y="234" class="stat-val">7</text>
+          <text x="0" y="264" class="stat-val">8</text>
+          <text x="0" y="294" class="stat-val">9</text>
+        </g>
+      </g>
+        <text x="20" y="58" class="stat-lbl">REPOSITORIES</text>
+      </g>
+    </a>
+    
+    <!-- Stat 2: Total Stars -->
+    <g transform="translate(200, 40)">
+      <rect width="180" height="75" rx="16" class="card-bg" />
+      <g transform="translate(142, 14)" stroke="#a78bfa" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </g>
+      
+      <g transform="translate(20, 18)" clip-path="url(#digitClip)">
+        <g style="animation: roll-1 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
+          <text x="0" y="24" class="stat-val">0</text>
+          <text x="0" y="54" class="stat-val">1</text>
+          <text x="0" y="84" class="stat-val">2</text>
+          <text x="0" y="114" class="stat-val">3</text>
+          <text x="0" y="144" class="stat-val">4</text>
+          <text x="0" y="174" class="stat-val">5</text>
+          <text x="0" y="204" class="stat-val">6</text>
+          <text x="0" y="234" class="stat-val">7</text>
+          <text x="0" y="264" class="stat-val">8</text>
+          <text x="0" y="294" class="stat-val">9</text>
+        </g>
+      </g>
+      <text x="20" y="58" class="stat-lbl" fill="#a78bfa">TOTAL STARS</text>
+    </g>
+    
+    <!-- Stat 3: Followers -->
+    <g transform="translate(0, 130)">
+      <rect width="180" height="75" rx="16" class="card-bg" />
+      <g transform="translate(142, 14)" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+      </g>
+      
+      <g transform="translate(20, 18)" clip-path="url(#digitClip)">
+        <g style="animation: roll-0 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
+          <text x="0" y="24" class="stat-val">0</text>
+          <text x="0" y="54" class="stat-val">1</text>
+          <text x="0" y="84" class="stat-val">2</text>
+          <text x="0" y="114" class="stat-val">3</text>
+          <text x="0" y="144" class="stat-val">4</text>
+          <text x="0" y="174" class="stat-val">5</text>
+          <text x="0" y="204" class="stat-val">6</text>
+          <text x="0" y="234" class="stat-val">7</text>
+          <text x="0" y="264" class="stat-val">8</text>
+          <text x="0" y="294" class="stat-val">9</text>
+        </g>
+      </g>
+      <text x="20" y="58" class="stat-lbl">FOLLOWERS</text>
+    </g>
+    
+    <!-- Stat 4: Forks -->
+    <g transform="translate(200, 130)">
+      <rect width="180" height="75" rx="16" class="card-bg" />
+      <g transform="translate(142, 14)" stroke="#64748b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+        <path d="M18 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 21v-6a3 3 0 0 0-3-3h-6M6 6v6"/>
+      </g>
+      
+      <g transform="translate(20, 18)" clip-path="url(#digitClip)">
+        <g style="animation: roll-0 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
+          <text x="0" y="24" class="stat-val">0</text>
+          <text x="0" y="54" class="stat-val">1</text>
+          <text x="0" y="84" class="stat-val">2</text>
+          <text x="0" y="114" class="stat-val">3</text>
+          <text x="0" y="144" class="stat-val">4</text>
+          <text x="0" y="174" class="stat-val">5</text>
+          <text x="0" y="204" class="stat-val">6</text>
+          <text x="0" y="234" class="stat-val">7</text>
+          <text x="0" y="264" class="stat-val">8</text>
+          <text x="0" y="294" class="stat-val">9</text>
+        </g>
+      </g>
+      <text x="20" y="58" class="stat-lbl">FORKS GENERATED</text>
+    </g>
+
+    
+    <!-- Recent Focus Card -->
+    <a href="https://github.com/SwomSanchez/SwomSanchez" target="_blank" style="text-decoration: none;">
+      <g transform="translate(0, 220)">
+        <rect width="380" height="85" rx="16" class="card-bg" />
+        
+        <!-- Pulsing Green Dot -->
+        <circle cx="26" cy="24" r="4.5" fill="#38ef7d" />
+        <circle cx="26" cy="24" r="4.5" fill="none" stroke="#38ef7d" stroke-width="1.8">
+          <animate attributeName="r" values="4.5;10" dur="1.8s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0" dur="1.8s" repeatCount="indefinite" />
+        </circle>
+        
+        <text x="40" y="28" class="stat-lbl" font-weight="700" letter-spacing="0.5px">CURRENT FOCUS</text>
+        <text x="20" y="50" font-size="15px" font-weight="700" fill="#ffffff">SwomSanchez</text>
+        <text x="20" y="68" font-size="11px" font-weight="400" fill="#94a3b8">Python • Active Just now</text>
+      </g>
+    </a>
+  </g>
+
+  <!-- Right Side: Top Languages -->
+  <g transform="translate(0, 170)">
+    <!-- Section Title with Code Icon -->
+    <g transform="translate(460, 3)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M16 18l6-6-6-6M8 6L2 12l6 6"/>
+    </g>
+    <text x="492" y="20" class="section-title">Top Languages</text>
+    
+        <g transform="translate(460, 50)">
+          <text x="0" y="15" class="card-desc" font-weight="600">JavaScript</text>
+          <text x="330" y="15" class="card-desc" font-weight="700" fill="#FF5E97">50.0%</text>
+          <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
+          <rect x="0" y="25" width="165.0" height="8" rx="4" fill="#FF5E97">
+            <animate attributeName="width" from="0" to="165.0" dur="1.2s" fill="freeze" />
+          </rect>
+        </g>
+        <g transform="translate(460, 95)">
+          <text x="0" y="15" class="card-desc" font-weight="600">Python</text>
+          <text x="330" y="15" class="card-desc" font-weight="700" fill="#A594F9">50.0%</text>
+          <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
+          <rect x="0" y="25" width="165.0" height="8" rx="4" fill="#A594F9">
+            <animate attributeName="width" from="0" to="165.0" dur="1.2s" fill="freeze" />
+          </rect>
+        </g>
+  </g>
+
+  <!-- Bottom: Tech Stack -->
+  <g transform="translate(0, 0)">
+    <!-- Section Title with Wrench/Layers Icon -->
+    <g transform="translate(45, 493)" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+    </g>
+    <text x="77" y="510" class="section-title">Tech Stack</text>
+    
+        <g class="tech-chip" transform="translate(45, 530)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">Python</text>
+        </g>
+        <g class="tech-chip" transform="translate(240, 530)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">JavaScript</text>
+        </g>
+        <g class="tech-chip" transform="translate(435, 530)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">C#</text>
+        </g>
+        <g class="tech-chip" transform="translate(630, 530)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">.NET</text>
+        </g>
+        <g class="tech-chip" transform="translate(45, 580)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">Playwright</text>
+        </g>
+        <g class="tech-chip" transform="translate(240, 580)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">Node.js</text>
+        </g>
+        <g class="tech-chip" transform="translate(435, 580)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">Docker</text>
+        </g>
+        <g class="tech-chip" transform="translate(630, 580)">
+          <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+          <image x="12" y="8" width="24" height="24" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+          <text x="46" y="24" class="tech-text" font-size="13px">Git</text>
+        </g>
+  </g>
+</svg>
