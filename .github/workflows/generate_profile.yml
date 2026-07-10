@@ -35,7 +35,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add assets/profile.svg
           git commit -m "Update profile SVG [skip ci]" || echo "No changes to commit"
+          git pull --rebase
           git push
+
