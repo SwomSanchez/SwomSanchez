@@ -10,13 +10,14 @@ import requests
 from collections import Counter
 import html
 from datetime import datetime, timezone
+import base64
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "SwomSanchez")
 TOKEN = os.environ.get("GH_TOKEN")  # Actions içinde GITHUB_TOKEN otomatik gelir
 
 HEADERS = {"Authorization": f"token {TOKEN}"} if TOKEN else {}
 
-DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons"
+DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons"
 TECH_ICONS = [
     ("Python", f"{DEVICON}/python/python-original.svg"),
     ("JavaScript", f"{DEVICON}/javascript/javascript-original.svg"),
@@ -27,6 +28,29 @@ TECH_ICONS = [
     ("Docker", f"{DEVICON}/docker/docker-original.svg"),
     ("Git", f"{DEVICON}/git/git-original.svg"),
 ]
+
+
+def get_as_base64(url, headers=None):
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        content_type = response.headers.get("Content-Type", "")
+        if not content_type:
+            if url.endswith(".svg"):
+                content_type = "image/svg+xml"
+            elif url.endswith(".png"):
+                content_type = "image/png"
+            else:
+                content_type = "image/jpeg"
+        else:
+            if ";" in content_type:
+                content_type = content_type.split(";")[0]
+        encoded = base64.b64encode(response.content).decode("utf-8")
+        return f"data:{content_type};base64,{encoded}"
+    except Exception as e:
+        print(f"Error fetching/encoding {url}: {e}")
+        return url
+
 
 
 def fetch_user():
@@ -132,7 +156,9 @@ def build_svg(user, repos, lang_stats):
     total_forks = sum(r.get("forks_count", 0) for r in repos)
     public_repos = user.get("public_repos", len(repos))
     followers = user.get("followers", 0)
-    avatar_url = html.escape(user.get("avatar_url", ""))
+    avatar_raw = user.get("avatar_url", "")
+    avatar_base64 = get_as_base64(avatar_raw, headers=HEADERS) if avatar_raw else ""
+    avatar_url = html.escape(avatar_base64)
     name = html.escape(user.get("name") or USERNAME)
     bio = html.escape(user.get("bio") or "Full Stack Developer")
 
@@ -207,10 +233,11 @@ def build_svg(user, repos, lang_stats):
         x = x_coords[col]
         y = y_coords[row]
         escaped_tech_name = html.escape(tech_name)
+        base64_icon = get_as_base64(url)
         icons_svg += f'''
         <g class="tech-chip" transform="translate({x}, {y})">
           <rect width="175" height="40" rx="12" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
-          <image x="12" y="8" width="24" height="24" href="{url}" />
+          <image x="12" y="8" width="24" height="24" href="{base64_icon}" />
           <text x="46" y="24" class="tech-text" font-size="13px">{escaped_tech_name}</text>
         </g>'''
 
