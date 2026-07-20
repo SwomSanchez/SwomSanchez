@@ -348,35 +348,7 @@
         </g>
         
       <g transform="translate(20, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(36, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.08s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(52, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.16s;">
+        <g style="animation: roll-2 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
           <text x="0" y="24" class="stat-val">0</text>
           <text x="0" y="54" class="stat-val">1</text>
           <text x="0" y="84" class="stat-val">2</text>
@@ -401,63 +373,7 @@
       </g>
       
       <g transform="translate(20, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(36, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.08s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(52, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.16s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(68, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.24s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(84, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.32s;">
+        <g style="animation: roll-0 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
           <text x="0" y="24" class="stat-val">0</text>
           <text x="0" y="54" class="stat-val">1</text>
           <text x="0" y="84" class="stat-val">2</text>
@@ -481,49 +397,7 @@
       </g>
       
       <g transform="translate(20, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(36, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.08s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(52, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.16s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(68, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.24s;">
+        <g style="animation: roll-0 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
           <text x="0" y="24" class="stat-val">0</text>
           <text x="0" y="54" class="stat-val">1</text>
           <text x="0" y="84" class="stat-val">2</text>
@@ -547,49 +421,7 @@
       </g>
       
       <g transform="translate(20, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(36, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.08s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(52, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.16s;">
-          <text x="0" y="24" class="stat-val">0</text>
-          <text x="0" y="54" class="stat-val">1</text>
-          <text x="0" y="84" class="stat-val">2</text>
-          <text x="0" y="114" class="stat-val">3</text>
-          <text x="0" y="144" class="stat-val">4</text>
-          <text x="0" y="174" class="stat-val">5</text>
-          <text x="0" y="204" class="stat-val">6</text>
-          <text x="0" y="234" class="stat-val">7</text>
-          <text x="0" y="264" class="stat-val">8</text>
-          <text x="0" y="294" class="stat-val">9</text>
-        </g>
-      </g>
-      <g transform="translate(68, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-9 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.24s;">
+        <g style="animation: roll-0 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
           <text x="0" y="24" class="stat-val">0</text>
           <text x="0" y="54" class="stat-val">1</text>
           <text x="0" y="84" class="stat-val">2</text>
@@ -607,7 +439,7 @@
 
     
     <!-- Recent Focus Card -->
-    <a href="https://github.com/SwomSanchez/CryptoTrack" target="_blank" style="text-decoration: none;">
+    <a href="https://github.com/SwomSanchez/SwomSanchez" target="_blank" style="text-decoration: none;">
       <g transform="translate(0, 220)">
         <rect width="380" height="85" rx="16" class="card-bg" />
         
@@ -619,8 +451,8 @@
         </circle>
         
         <text x="40" y="28" class="stat-lbl" font-weight="700" letter-spacing="0.5px">CURRENT FOCUS</text>
-        <text x="20" y="50" font-size="15px" font-weight="700" fill="#ffffff">CryptoTrack</text>
-        <text x="20" y="68" font-size="11px" font-weight="400" fill="#94a3b8">JavaScript • Active 9d ago</text>
+        <text x="20" y="50" font-size="15px" font-weight="700" fill="#ffffff">SwomSanchez</text>
+        <text x="20" y="68" font-size="11px" font-weight="400" fill="#94a3b8">Python • Active 4h ago</text>
       </g>
     </a>
   </g>
@@ -635,42 +467,18 @@
     
         <g transform="translate(460, 50)">
           <text x="0" y="15" class="card-desc" font-weight="600">JavaScript</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#FF5E97">45.0%</text>
+          <text x="330" y="15" class="card-desc" font-weight="700" fill="#FF5E97">50.0%</text>
           <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="148.5" height="8" rx="4" fill="#FF5E97">
-            <animate attributeName="width" from="0" to="148.5" dur="1.2s" fill="freeze" />
+          <rect x="0" y="25" width="165.0" height="8" rx="4" fill="#FF5E97">
+            <animate attributeName="width" from="0" to="165.0" dur="1.2s" fill="freeze" />
           </rect>
         </g>
         <g transform="translate(460, 95)">
           <text x="0" y="15" class="card-desc" font-weight="600">Python</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#A594F9">25.0%</text>
+          <text x="330" y="15" class="card-desc" font-weight="700" fill="#A594F9">50.0%</text>
           <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="82.5" height="8" rx="4" fill="#A594F9">
-            <animate attributeName="width" from="0" to="82.5" dur="1.2s" fill="freeze" />
-          </rect>
-        </g>
-        <g transform="translate(460, 140)">
-          <text x="0" y="15" class="card-desc" font-weight="600">HTML</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#4DEEEA">15.0%</text>
-          <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="49.5" height="8" rx="4" fill="#4DEEEA">
-            <animate attributeName="width" from="0" to="49.5" dur="1.2s" fill="freeze" />
-          </rect>
-        </g>
-        <g transform="translate(460, 185)">
-          <text x="0" y="15" class="card-desc" font-weight="600">CSS</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#38EF7D">10.0%</text>
-          <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="33.0" height="8" rx="4" fill="#38EF7D">
-            <animate attributeName="width" from="0" to="33.0" dur="1.2s" fill="freeze" />
-          </rect>
-        </g>
-        <g transform="translate(460, 230)">
-          <text x="0" y="15" class="card-desc" font-weight="600">Shell</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#F9D423">5.0%</text>
-          <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="16.5" height="8" rx="4" fill="#F9D423">
-            <animate attributeName="width" from="0" to="16.5" dur="1.2s" fill="freeze" />
+          <rect x="0" y="25" width="165.0" height="8" rx="4" fill="#A594F9">
+            <animate attributeName="width" from="0" to="165.0" dur="1.2s" fill="freeze" />
           </rect>
         </g>
   </g>
