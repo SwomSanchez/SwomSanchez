@@ -439,7 +439,7 @@
 
     
     <!-- Recent Focus Card -->
-    <a href="https://github.com/SwomSanchez/SwomSanchez" target="_blank" style="text-decoration: none;">
+    <a href="https://github.com/SwomSanchez/CryptoTrack" target="_blank" style="text-decoration: none;">
       <g transform="translate(0, 220)">
         <rect width="380" height="85" rx="16" class="card-bg" />
         
@@ -451,8 +451,8 @@
         </circle>
         
         <text x="40" y="28" class="stat-lbl" font-weight="700" letter-spacing="0.5px">CURRENT FOCUS</text>
-        <text x="20" y="50" font-size="15px" font-weight="700" fill="#ffffff">SwomSanchez</text>
-        <text x="20" y="68" font-size="11px" font-weight="400" fill="#94a3b8">Python • Active 2h ago</text>
+        <text x="20" y="50" font-size="15px" font-weight="700" fill="#ffffff">CryptoTrack</text>
+        <text x="20" y="68" font-size="11px" font-weight="400" fill="#94a3b8">JavaScript • Active 15m ago</text>
       </g>
     </a>
   </g>
