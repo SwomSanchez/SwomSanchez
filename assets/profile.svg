@@ -348,7 +348,7 @@
         </g>
         
       <g transform="translate(20, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-3 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
+        <g style="animation: roll-2 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
           <text x="0" y="24" class="stat-val">0</text>
           <text x="0" y="54" class="stat-val">1</text>
           <text x="0" y="84" class="stat-val">2</text>
@@ -373,7 +373,7 @@
       </g>
       
       <g transform="translate(20, 18)" clip-path="url(#digitClip)">
-        <g style="animation: roll-7 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
+        <g style="animation: roll-6 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: 0.0s;">
           <text x="0" y="24" class="stat-val">0</text>
           <text x="0" y="54" class="stat-val">1</text>
           <text x="0" y="84" class="stat-val">2</text>
@@ -467,18 +467,10 @@
     
         <g transform="translate(460, 50)">
           <text x="0" y="15" class="card-desc" font-weight="600">Python</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#FF5E97">66.7%</text>
+          <text x="330" y="15" class="card-desc" font-weight="700" fill="#FF5E97">100.0%</text>
           <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="219.99999999999994" height="8" rx="4" fill="#FF5E97">
-            <animate attributeName="width" from="0" to="219.99999999999994" dur="1.2s" fill="freeze" />
-          </rect>
-        </g>
-        <g transform="translate(460, 95)">
-          <text x="0" y="15" class="card-desc" font-weight="600">JavaScript</text>
-          <text x="330" y="15" class="card-desc" font-weight="700" fill="#A594F9">33.3%</text>
-          <rect x="0" y="25" width="330" height="8" rx="4" fill="rgba(255, 255, 255, 0.05)" />
-          <rect x="0" y="25" width="109.99999999999997" height="8" rx="4" fill="#A594F9">
-            <animate attributeName="width" from="0" to="109.99999999999997" dur="1.2s" fill="freeze" />
+          <rect x="0" y="25" width="330.0" height="8" rx="4" fill="#FF5E97">
+            <animate attributeName="width" from="0" to="330.0" dur="1.2s" fill="freeze" />
           </rect>
         </g>
   </g>
